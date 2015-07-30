@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let allocSize:Int = 10 * 1024 * 1024    // 10MB
+    let allocSize:Int = 20 * 1024 * 1024    // 20MB
 
     func getRandomNumber(cnt:Int) -> Int{
         var result:Int
