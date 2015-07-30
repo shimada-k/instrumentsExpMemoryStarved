@@ -9,7 +9,26 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let allocSize:Int = 10 * 1024 * 1024    // 10MB
 
+    func getRandomNumber(cnt:Int) -> Int{
+        var result:Int
+        result = Int(arc4random() % UInt32(cnt))
+        return result
+    }
+    
+    @IBAction func btnStart(sender: AnyObject) {
+
+        var arr:[Int] = [Int](count: allocSize, repeatedValue:0)
+        
+        while true {
+            let random:Int = getRandomNumber(allocSize)
+            arr[Int(random)] = Int(1)
+        }
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
